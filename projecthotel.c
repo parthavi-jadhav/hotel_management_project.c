@@ -97,7 +97,7 @@ printf("------------------------------------------------------------------------
     printf("\033[35m\n• The benefits include: \n"
            "- 5 percent discount on every trip \n"
            "- Free access to the swimming pool \n"
-           "- Free beverages from the cafeteria\033]0m \n");
+           "- Free beverages from the cafeteria \n \033]0m \n");
 
     scanf(" %c", &at);
 
@@ -244,7 +244,7 @@ printf("\nPlease enter valid rating .");
 }while(star>5);
 
 printf("\n-----------------------------------------------------------------------------");
-printf("\n  😊 💫 \033[33mTHANK YOU & VISIT AGAIN \033[0m 😊 💫");
+printf("\n  ^_^  \033[33mTHANK YOU & VISIT AGAIN \033[0m  ^_^ ");
 
 getch();
 return (0);
