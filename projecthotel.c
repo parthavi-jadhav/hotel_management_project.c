@@ -20,7 +20,7 @@ int main() {
     printf("This is normal text\n");
     return 0;
 }*/
-void main()
+int main()
 {int o,n,p;
     printf("\033[1;34m_____________...WELCOME TO SKYLINE HOTEL..._____________\033[0m\n");
     start: //label for goto
@@ -113,7 +113,7 @@ printf("------------------------------------------------------------------------
                     printf("\nCongratulations! You have obtained your monthly membership card!!!\n");
                     printf("You will receive your membership credentials on your contact number.\n");
                     printf("\nPlease enter your contact number: ");
-                    scanf("%s", pn);
+                    scanf(" %s", pn);
                     break;
 
                 case 2:
@@ -137,7 +137,7 @@ printf("------------------------------------------------------------------------
 printf("\n-----------------------------------------------------------------------------");
 char ans;
     printf("\nWould you like to opt for the swimming pool services? \t \033[1;31m (NOTE:Free for everyone)\033[0m \n(y/n):");
-    scanf("%c",&ans);
+    scanf(" %c",&ans);
 
     if (ans=='y' || ans=='Y')
     {printf("\nnoted! enjoy your time swimming.");}
@@ -149,11 +149,11 @@ printf("\n----------------------------------------------------------------------
 char ru;
 int hi;
 printf(" \nWould you like to enjoy our indoor sports auditorium services?  \033[1;31m(NOTE: Not free; fees will be counted in the overall reciept) \t \033[0m(y/n)");
-scanf("%c",&ru);
+scanf(" %c",&ru);
 if(ru=='y' || ru=='Y')
 { printf(" \nWe offer the following sports : \n \033[36m1]Badminton \t 2]Table tennis \t 3]Chess \t 4]Billiards \t 5]Cards  \033[0m");
   printf(" \n\nplease select your favourable time slot : 1] 8:00 AM to 10:00 AM  \t 2] 10:00 AM to 12:00 PM  \t 3] 1:00 PM to 3:00 PM \t 4] 3:00 PM to 5:00 PM \t 5]5:00 PM to 9:00 PM \n");
-  scanf("%d",&hi);
+  scanf(" %d",&hi);
   printf(" \nNOTED! ");
 
 }
@@ -165,13 +165,13 @@ else
 printf("\n-----------------------------------------------------------------------------");
 char an;
 printf("\nWould you like to opt for our cafeteria or restaurant services?:(y/n) \n  \033[1;31m(note: cafeteria and restaurant are different; seperate payments needed in special orders)\033[0m");
-scanf("%c",&an);
+scanf(" %c",&an);
 
 int op;
 if (an =='y' || an=='Y')
 {  printf (" \nwhich of the services combo do you prefer:\n \033[36m1] cafeteria only \t 2] restaurant only \t 3] both cafeteria and restaurant \n \033[0m");
    printf("\n\n****** CAFETERIA: provides you with exclusive and refreshing beverages and snacks \n RESTAURANT: provides you with heartwarming meals of your choice and unique cuisines.******\n");
-   scanf("%d",&op);
+   scanf(" %d",&op);
    char yu;
    switch(op)
    {   case 1: { printf("\n \033[1;35m .....WELCOME TO OUR CAFETERIA..... \033[0m\n\033[34m To order for your favourite refreshments and snacks , we will send you the menu card to your hotel room when you check in to the hotel!\n THANK YOU! \033[0m" );
@@ -179,7 +179,7 @@ if (an =='y' || an=='Y')
                 scanf(" %c",&yu);
         
                  printf(" \033[33m\nWe offer *hot beverages \t  *cold beverages \t *cocktails\t *bubble teas and much more....\033[0m");
-
+                 break;
                }
         case 2:{ printf ("\033[1;35m\n.....WELCOME TO OUR RESTAURANT.....\033[0m \n \033[34mTo order for your meals we will send the menu card to your hotel room when you check in to our hotel!\n THANK YOU!\033[0m");
                 printf(" \n\nwould you like to see the diferrent types of cuisines offered by us (y/n):");
@@ -188,6 +188,7 @@ if (an =='y' || an=='Y')
                 if(yu=='y')
                  { printf("\033[33m\nWe offer *Chinese cuisine \t *Thai cuisine \t *Indian cuisine \t *French cuisine \t *Western cuisine and much more....\033[0m");
                 }
+                break;
                }     
                 
         case 3:{ printf("\033[1;35m\n .....WELCOME TO OUR CAFETERIA & RESTAURANT.....\033[0m \n \033[34mo order for your favourite refreshments,snacks and meals , we will send you the menu card to your hotel room when you check in to the hotel!\n THANK YOU! \033[0m");
@@ -198,6 +199,7 @@ if (an =='y' || an=='Y')
                    printf("\n\nWe also offer \033[33m*hot beverages \t  *cold beverages \t *cocktails\t *bubble teas and much more....\033[0m");
 
                  }
+                break;
                }
     }
 }
@@ -214,7 +216,7 @@ int t;
 
   if (f=='y'||f=='Y')
   do {printf("\nWould you like to proceed with 1] online payment 2] Offline payment");
-    scanf("%d",&t);
+    scanf(" %d",&t);
     switch(t)
     { case 1: {printf(" \n Please pay to the given account no. : 1133452678 \n \033[32mthank you for your payment & you will recieve the reciept on your contact no.\033[0m");
                break;}
@@ -234,7 +236,7 @@ printf("\n----------------------------------------------------------------------
 // Rating and thank you//
 int star;
 do{printf("\n \n \033[1;32m ***********_____PLEASE RATE OUR HOTEL WEBSITE_____*********** \033[0m \n  How many stars would you you like to rate us of of 5:\t");
-scanf("%d",&star);
+scanf(" %d",&star);
 if(star<=5)
 printf( "\nThank you for rating us! Enjoy your stay.");
 else 
@@ -245,4 +247,5 @@ printf("\n----------------------------------------------------------------------
 printf("\n  😊 💫 \033[33mTHANK YOU & VISIT AGAIN \033[0m 😊 💫");
 
 getch();
+return (0);
 }
